@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications - Pierluigi Rinaldi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: monospace;
+    }
+
+    body {
+      display: flex;
+      background: url('public/main-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .menu-bar {
+      width: 33.33%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .name {
+      font-size: 2em;
+      margin-bottom: 2em;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .profile-pic {
+      width: 250px;
+      height: 250px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      margin-bottom: 1em;
+      display: block;
+    }
+
+    .info {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .institution {
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: flex-end;
+    }
+
+    .nav-buttons a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 0.5em 1em;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .content {
+      width: 66.66%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+      position: relative;
+    }
+
+    .pub-box {
+      background-color: white;
+      color: black;
+      padding: 2em;
+      max-width: 800px;
+      max-height: 80vh;
+      overflow-y: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .pub-box h1 {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    .pub-box ul {
+      padding-left: 1.2em;
+      margin-bottom: 2em;
+    }
+
+    .pub-box li {
+      margin-bottom: 1em;
+      line-height: 1.5;
+    }
+
+    .pub-box a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .pub-box a:hover {
+      text-decoration: underline;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      text-decoration: none;
+      background-color: white;
+      color: black;
+      padding: 0.7em 1.2em;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: bold;
+      border: 2px solid black;
+      transition: background-color 0.3s, color 0.3s;
+      z-index: 2;
+    }
+
+    .back-button:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="name">Pierluigi Rinaldi</div>
+    <div class="profile">
+      <img src="public/profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <div class="info">
+        <div class="position">Postdoctoral Research Associate</div>
+        <div class="institution">Department of Astronomy and Steward Observatory, Tucson</div>
+        <div class="email">prinaldi@arizona.edu</div>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <a href="about.html">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <a class="back-button" href="index.html">← Back to Home</a>
+    <div class="pub-box">
+      <h1>First-Author Publications</h1>
+      <div id="publist">Loading publications...</div>
+
+      <h1>All Publications</h1>
+      <p>
+        For a full list of my publications, please visit my <a href="https://ui.adsabs.harvard.edu/search/filter_database_fq_database=AND&filter_database_fq_database=database%3A%22astronomy%22&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3A%22astronomy%22)&q=author%3A%22Rinaldi%2C%20Pierluigi%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">NASA ADS author profile</a>.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    fetch('publications_list.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('publist').innerHTML = html;
+      })
+      .catch(() => {
+        document.getElementById('publist').innerHTML = "<p>⚠️ Could not load publications.</p>";
+      });
+  </script>
+</body>
+</html>
