@@ -120,22 +120,26 @@
     }
 
     .back-button {
-      display: inline-block;
-      text-decoration: none;
-      background-color: white;
-      color: black;
-      font-weight: bold;
-      padding: 0.6em 1.2em;
-      border: 2px solid black;
-      border-radius: 5px;
-      margin-top: 1em;
-      transition: background-color 0.3s, color 0.3s;
-    }
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 0.7em 1.2em;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid black;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 2;
+}
 
-    .back-button:hover {
-      background-color: black;
-      color: white;
-    }
+.back-button:hover {
+  background-color: black;
+  color: white;
+}
+
   </style>
 </head>
 <body>
