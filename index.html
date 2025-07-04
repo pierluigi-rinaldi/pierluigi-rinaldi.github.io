@@ -92,19 +92,20 @@
       background-color: rgba(255, 255, 255, 0.3);
     }
 
-    .image-caption {
+  .image-caption {
   position: absolute;
-  top: 0;
-  left: 33.33%;
-  width: 66.%;
-  height: 100%;
-  padding: 2em;
+  left: 33.33%; /* Start where the menu bar ends */
+  bottom: 2em;   /* Distance from the bottom of the page */
+  width: calc(66.66% - 4em); /* Full right side with margin */
+  max-width: 800px;
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.85);
   color: #000;
-  font-size: 0.6em;
-  line-height: 1.5;
-  overflow-y: auto;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+  border-radius: 20px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
   </style>
 </head>
