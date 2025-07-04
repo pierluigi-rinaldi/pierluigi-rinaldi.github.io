@@ -3,10 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pierluigi Rinaldi</title>
-  <script type="module" src="/src/App.jsx"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Your Name</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('public/main-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .menu-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 33.33%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2em;
+    }
+
+    .name {
+      font-size: 2em;
+      margin-bottom: 2em;
+    }
+
+    .nav-buttons {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: flex-end;
+    }
+
+    .nav-buttons a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 0.5em 1em;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  </style>
 </head>
-<body class="bg-black">
+<body>
+  <div class="menu-bar">
+    <div class="name">Your Name</div>
+    <div class="nav-buttons">
+      <a href="about.html">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
 </body>
 </html>
