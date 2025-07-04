@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Pierluigi Rinaldi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: monospace;
+    }
+
+    body {
+      display: flex;
+      background: url('public/main-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .menu-bar {
+      width: 33.33%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .name {
+      font-size: 2em;
+      margin-bottom: 2em;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      margin-bottom: 1em;
+      display: block;
+    }
+
+    .info {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .institution {
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: flex-end;
+    }
+
+    .nav-buttons a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 0.5em 1em;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .content {
+      width: 66.66%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+    }
+
+    .about-box {
+      background-color: white;
+      color: black;
+      padding: 2em;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-box h1 {
+      margin-bottom: 1em;
+      font-size: 1.5em;
+    }
+
+    .about-box p {
+      line-height: 1.6;
+      margin-bottom: 1.5em;
+    }
+
+    .about-box a.back-button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #333;
+      color: white;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+    }
+
+    .about-box a.back-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="name">Pierluigi Rinaldi</div>
+    <div class="profile">
+      <img src="public/profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <div class="info">
+        <div class="institution">University of Arizona, Tucson</div>
+        <div class="email">prinaldi@arizona.edu</div>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <a href="about.html">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="about-box">
+      <h1>About Me</h1>
+      <p>
+        I am currently a Postdoctoral Research Associate at the University of Arizona (Tucson, AZ),
+        working at the Department of Astronomy and Steward Observatory. I received my PhD from the
+        University of Groningen, where I worked on the early stages of galaxy evolution with
+        space-based observatories such as JWST and HST.
+      </p>
+      <p>
+        My research focuses on understanding the formation of galaxies in the early Universe,
+        using imaging and spectroscopy from JWST, and studying extreme sources such as Little Red Dots (LRDs).
+      </p>
+      <a class="back-button" href="index.html">← Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
