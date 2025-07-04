@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name</title>
+  <title>Pierluigi Rinaldi</title>
   <style>
     * {
       margin: 0;
@@ -40,6 +40,35 @@
       margin-bottom: 2em;
     }
 
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      margin-bottom: 1em;
+      display: block;
+    }
+
+    .info {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .institution {
+      font-weight: bold;
+    }
+
     .nav-buttons {
       margin-top: auto;
       display: flex;
@@ -66,7 +95,7 @@
 </head>
 <body>
   <div class="menu-bar">
-<div class="name">Pierluigi Rinaldi</div>
+    <div class="name">Pierluigi Rinaldi</div>
     <div class="profile">
       <img src="public/profile.jpg" alt="Profile Picture" class="profile-pic" />
       <div class="info">
