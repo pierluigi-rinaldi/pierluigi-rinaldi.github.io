@@ -1,0 +1,1 @@
+This is a pretty static website. So each html file is basically the same as index.html where add all the small piece of info. You must keep it updated manually, not a big deal but you need to it periodically.

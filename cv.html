@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Pierluigi Rinaldi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: monospace;
+    }
+
+    body {
+      display: flex;
+      background: url('public/main-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .menu-bar {
+      width: 33.33%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .name {
+      font-size: 2em;
+      margin-bottom: 2em;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .profile-pic {
+      width: 250px;
+      height: 250px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      margin-bottom: 1em;
+      display: block;
+    }
+
+    .info {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .institution {
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: flex-end;
+    }
+
+    .nav-buttons a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 0.5em 1em;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .content {
+      width: 66.66%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+    }
+
+    .cv-box {
+      background-color: white;
+      color: black;
+      padding: 2em;
+      max-width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .cv-box h2 {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    .cv-box p, .cv-box ul {
+      line-height: 1.6;
+      margin-bottom: 1.5em;
+    }
+
+    .back-button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      padding: 0.6em 1.2em;
+      border: 2px solid black;
+      border-radius: 5px;
+      margin-top: 1em;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="name">Pierluigi Rinaldi</div>
+    <div class="profile">
+      <img src="public/profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <div class="info">
+        <div class="position">Postdoctoral Research Associate</div>
+        <div class="institution">Department of Astronomy and Steward Observatory, Tucson</div>
+        <div class="email">prinaldi@arizona.edu</div>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <a href="about.html">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+
+  <div class="content">
+  <a class="back-button" href="index.html">← Back to Home</a>
+  <div class="cv-box">
+    <h2>Education</h2>
+    <p>Ph.D. Astronomy, University of Groningen. Thesis: "Unfolding the early Universe with JWST".</p>
+    <p>M.Sc. Astrophysics and Cosmology (cum laude), University of Bologna. Thesis on simulations of high-redshift galaxy spectra in the Euclid Deep Fields.</p>
+    <p>B.Sc. Physics, University of Bari Aldo Moro. Thesis on planetary formation and condensation processes.</p>
+
+    <h2>Appointments</h2>
+    <p>2025 (expected): Postdoctoral Fellow, STScI, Baltimore, USA.</p>
+    <p>2024–2025: Postdoctoral Research Associate, University of Arizona, Tucson, USA.</p>
+
+    <h2>Research Interests</h2>
+    <p>Galaxy formation and evolution, AGN, SMBH growth, cosmic structure, JWST instrumentation and analysis, software development.</p>
+
+    <h2>Professional Expertise</h2>
+    <p>Data Reduction: JWST (MIRI, NIRCam, NIRISS, NIRSpec).<br>
+       Software: Python, C++, LaTeX, JWST pipeline, Bagpipes, Prospector, LePHARE, MIRAGE, SExtractor.<br>
+       Analysis: Photometry, SED fitting, catalogs, spectral analysis.</p>
+
+    <h2>Memberships & Collaborations</h2>
+    <p>MIRIC, JADES, SMILES, MIDIS, OASIS, MIRI GTO, Roman Telescope WG, Euclid Consortium.</p>
+
+    <h2>Full PDF</h2>
+    <p>You can download my full CV <a href="public/CV_Pierluigi_Rinaldi.pdf" target="_blank">here</a>.</p>
+  </div>
+</div>
+</body>
+</html>
