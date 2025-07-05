@@ -154,7 +154,73 @@
       color: white;
     }
 
-    
+    @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+
+    .menu-bar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5em;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+
+    .nav-buttons {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 1em;
+      gap: 1em;
+    }
+
+    .content {
+      width: 100%;
+      padding: 1.5em;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .image-caption,
+    .pub-box,
+    .about-box,
+    .cv-box {
+      width: 100% !important;
+      max-width: 100%;
+      max-height: none;
+      padding: 1.5em;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .back-button {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      margin-bottom: 1em;
+    }
+
+    .arxiv-adv,
+    .apod-adv {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: 1em auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+  }
 
   </style>
 </head>
