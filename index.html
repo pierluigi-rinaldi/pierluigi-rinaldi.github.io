@@ -230,14 +230,17 @@
     .image-caption,
     .pub-box,
     .about-box,
-    .cv-box {
-      width: 100% !important;
-      max-width: 100%;
-      max-height: none;
-      padding: 1.5em;
-      border-radius: 0;
-      box-shadow: none;
-    }
+    ..cv-box {
+  width: 100% !important;
+  max-width: 100%;
+  max-height: none;
+  padding: 1.5em;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;  /* ✅ Add this line */
+  bottom: auto;        /* ✅ Reset bottom spacing from desktop */
+  left: auto;          /* ✅ Reset left position */
+}
 
     .back-button {
       position: relative;
