@@ -156,6 +156,42 @@
     font-size: 0.8em;
     max-width: 200px;
   }
+
+  .apod-adv {
+  position: absolute;
+  top: 5.5em; /* place below arXiv badge */
+  right: 1em;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  font-family: monospace;
+  color: black;
+  text-decoration: none;
+  z-index: 999;
+  max-width: 260px;
+}
+
+.apod-adv:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+.apod-adv img {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.apod-adv span {
+  font-size: 0.8em;
+}
+
   </style>
 </head>
 <body>
@@ -201,6 +237,12 @@
   <img src="https://img.shields.io/badge/arXiv-astro--ph.GA-red?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv astro-ph.GA" />
   <span>If you want to stay always updated with the latest amazing discoveries, go here!</span>
   </a>
+
+  <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank" class="apod-adv">
+  <img src="https://apod.nasa.gov/apod/image/2407/NGC7331_Hubble_960.jpg" alt="NASA APOD" />
+  <span>Check out today's NASA Astronomy Picture of the Day!</span>
+</a>
+
 
 </body>
 </html>
