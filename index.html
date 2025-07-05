@@ -124,6 +124,38 @@
 .linkedin-icon:hover {
   transform: scale(1.2);
 }
+
+ .arxiv-adv {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    font-family: monospace;
+    color: black;
+    text-decoration: none;
+    z-index: 1000;
+  }
+
+  .arxiv-adv:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
+    transition: 0.3s ease;
+  }
+
+  .arxiv-adv img {
+    height: 32px;
+  }
+
+  .arxiv-adv span {
+    font-size: 0.8em;
+    max-width: 200px;
+  }
   </style>
 </head>
 <body>
@@ -164,5 +196,11 @@
       NASA, ESA, G. Illingworth, D. Magee, and P. Oesch, R. Bouwens, and the HUDF09 Team
     </p>
   </div>
+
+  <a href="https://arxiv.org/list/astro-ph.GA/recent" target="_blank" class="arxiv-adv">
+  <img src="https://img.shields.io/badge/arXiv-astro--ph.GA-red?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv astro-ph.GA" />
+  <span>If you want to stay always updated with the latest amazing discoveries, go here!</span>
+  </a>
+
 </body>
 </html>
