@@ -227,7 +227,14 @@
       flex-direction: column;
     }
 
-    .image-caption,
+    .image-caption {
+  position: relative !important;   /* Override absolute positioning */
+  left: auto !important;
+  bottom: auto !important;
+  margin-top: 2em;
+  width: 90% !important;
+  background-color: rgba(255, 255, 255, 0.95); /* Optional: improve readability on phones */
+}
     .pub-box,
     .about-box,
     ..cv-box {
