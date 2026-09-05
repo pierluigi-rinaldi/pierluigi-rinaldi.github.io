@@ -1,12 +1,25 @@
-# Pierluigi Rinaldi — website redesign
+Pierluigi Rinaldi website redesign
 
-Drop these files into the root of `pierluigi-rinaldi.github.io` and keep the existing `public/` folder.
+This version keeps the site minimal and horizontal, while simplifying the research presentation into three broad scientific themes:
+- Early Universe / Reionization
+- AGNs / Little Red Dots / Black-Hole Growth
+- Stellar Mass Assembly / Cosmic Structures
 
-Files replaced/added:
-- `index.html`
-- `about.html`
-- `publications.html`
-- `cv.html`
-- `styles.css`
+What changed:
+- Removed object-by-object/project-specific homepage entries.
+- Added three representative topic images in public/.
+- Cleaned the navigation so it points only to current sections/pages.
+- Simplified the publications page so paper titles are the main content, each linking out directly, with a separate NASA ADS link for the full record.
+- Kept GitHub Pages compatibility (plain static HTML/CSS).
 
-The design is intentionally static and dependency-free so it works directly on GitHub Pages.
+Files added/updated:
+- index.html
+- publications.html
+- styles.css
+- README.md
+- public/topic-reionization.png
+- public/topic-blackhole.png
+- public/topic-structures.png
+
+Important:
+Keep your existing public/main-image.jpg and public/CV_Pierluigi_Rinaldi.pdf from the repository.
