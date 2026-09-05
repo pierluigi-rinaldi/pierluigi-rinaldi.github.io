@@ -88,4 +88,11 @@ img{display:block;max-width:100%}
  .topic-image,.topic-row.reverse .topic-image{height:280px;border:0;border-bottom:1px solid var(--line)}
  .topic-copy{padding:36px 0}
  .pub-item-simple{grid-template-columns:72px 1fr}
+ .image-credit{
+  display: block;
+  margin-top: 12px;
+  font-size: 0.62rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
 }
