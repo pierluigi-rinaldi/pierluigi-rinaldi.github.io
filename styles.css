@@ -440,10 +440,11 @@ img{
 
 .image-credit{
   display:block;
-  margin-top:12px;
-  font-size:.62rem;
-  line-height:1.35;
-  color:var(--muted);
+  margin-top:10px;
+  font-size:0.5rem;
+  line-height:1.25;
+  color:#8a8c90;
+  letter-spacing:.02em;
 }
 
 /* Publications */
