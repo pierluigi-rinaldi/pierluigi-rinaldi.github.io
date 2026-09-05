@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pierluigi Rinaldi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: monospace;
+    }
+
+    body {
+      background: url('public/main-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .menu-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 33.33%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2em;
+    }
+
+    .name {
+      font-size: 2em;
+      margin-bottom: 2em;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .profile-pic {
+      width: 250px;
+      height: 250px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      margin-bottom: 1em;
+      display: block;
+    }
+
+    .info {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .institution {
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: flex-end;
+    }
+
+    .nav-buttons a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 0.5em 1em;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+  .image-caption {
+  position: absolute;
+  left: 40%; /* Start where the menu bar ends */
+  bottom: 2em;   /* Distance from the bottom of the page */
+  width: calc(66.66% - 4em); /* Full right side with margin */
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 1.5em;
+  border-radius: 20px;
+  font-size: 0.5em;
+  line-height: 1.6;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+  .linkedin-link {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.linkedin-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+  transition: transform 0.3s;
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.2);
+}
+
+ .arxiv-adv {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    font-family: monospace;
+    color: black;
+    text-decoration: none;
+    z-index: 1000;
+  }
+
+  .arxiv-adv:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
+    transition: 0.3s ease;
+  }
+
+  .arxiv-adv img {
+    height: 32px;
+  }
+
+  .arxiv-adv span {
+    font-size: 0.8em;
+    max-width: 200px;
+  }
+
+  .apod-adv {
+  position: absolute;
+  top: 8em; /* pushes it farther down */
+  right: 1em;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  font-family: monospace;
+  color: black;
+  text-decoration: none;
+  z-index: 999;
+  max-width: 260px;
+}
+
+.apod-adv:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+.apod-adv img {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.apod-adv span {
+  font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+
+    .menu-bar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5em;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+
+    .nav-buttons {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 1em;
+      gap: 1em;
+    }
+
+    .content {
+      width: 100%;
+      padding: 1.5em;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .image-caption {
+  position: relative !important;   /* Override absolute positioning */
+  left: auto !important;
+  bottom: auto !important;
+  margin-top: 2em;
+  width: 90% !important;
+  background-color: rgba(255, 255, 255, 0.95); /* Optional: improve readability on phones */
+}
+    .pub-box,
+    .about-box,
+    ..cv-box {
+  width: 100% !important;
+  max-width: 100%;
+  max-height: none;
+  padding: 1.5em;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;  /* ✅ Add this line */
+  bottom: auto;        /* ✅ Reset bottom spacing from desktop */
+  left: auto;          /* ✅ Reset left position */
+}
+
+    .back-button {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      margin-bottom: 1em;
+    }
+
+    .arxiv-adv,
+    .apod-adv {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: 1em auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="name">Pierluigi Rinaldi</div>
+    <div class="profile">
+      <img src="public/profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <div class="info">
+        <div class="position">Cosmic Frontier Center Prize Fellow</div>
+        <div class="institution">Cosmic Frontier Center, University of Texas at Austin, Austin, TX, US</div>
+        <div class="email">prinaldi@utexas.edu</div>
+      </div>
+        <!-- 🔽 Add this block below -->
+        <a href="https://www.linkedin.com/in/pierluigi-rinaldi-2276b9192/" target="_blank" class="linkedin-link">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="linkedin-icon" />
+    </a>
+
+    </div>
+
+    <div class="nav-buttons">
+      <a href="about.html">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+
+  <div class="image-caption">
+    <p>
+      This image, called the Hubble eXtreme Deep Field (XDF), combines Hubble observations taken over the past decade of a small patch of sky in the constellation of Fornax. With a total of over two million seconds of exposure time, it is the deepest image of the Universe ever made, combining data from previous images including the Hubble Ultra Deep Field (taken in 2002 and 2003) and Hubble Ultra Deep Field Infrared (2009).
+    </p>
+    <p>
+      The image covers an area less than a tenth of the width of the full Moon, making it just a 30 millionth of the whole sky. Yet even in this tiny fraction of the sky, the long exposure reveals about 5500 galaxies, some of them so distant that we see them when the Universe was less than 5% of its current age.
+    </p>
+    <p>
+      The Hubble eXtreme Deep Field image contains several of the most distant objects ever identified.
+    </p>
+    <p><strong>Credit:</strong><br>
+      NASA, ESA, G. Illingworth, D. Magee, and P. Oesch, R. Bouwens, and the HUDF09 Team
+    </p>
+  </div>
+
+  <a href="https://arxiv.org/list/astro-ph.GA/recent" target="_blank" class="arxiv-adv">
+  <img src="https://img.shields.io/badge/arXiv-astro--ph.GA-red?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv astro-ph.GA" />
+  <span>If you want to stay always updated with the latest amazing discoveries, go here!</span>
+  </a>
+
+ <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank" class="apod-adv">
+  <img src="https://img.icons8.com/ios-filled/50/000000/camera.png" alt="Camera Icon" />
+  <span>Check out today's NASA Astronomy Picture of the Day!</span>
+</a>
+
+
+
+</body>
+</html>
